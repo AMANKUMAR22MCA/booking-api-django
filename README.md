@@ -101,10 +101,9 @@ Books 1 or more slots for a class.
 #### Request Body:
 ```json
 {
-  "class_id": 3,
+  "class_id": 1,      -- mention the class id of the fitnessclass
   "client_name": "Test User",
-  "client_email": "test@example.com",
-  "slots": 1
+  "client_email": "test@example.com"
 }
 ```
 
