@@ -72,3 +72,51 @@ python manage.py test
 
 Add `tz=<timezone>` in the bookings API (e.g., `America/New_York`, `Asia/Kolkata`).
 
+
+
+## 📬 Sample API Requests (Using Postman or curl)
+
+### 1️⃣ Create a Fitness Class
+
+**POST** `http://127.0.0.1:8000/classes/`  
+Creates a new fitness class.
+
+#### Request Body:
+```json
+{
+  "name": "HIIT Blast",
+  "start_time": "2025-06-10T18:00:00Z",
+  "instructor": "Anjali Mehta",
+  "total_slots": 3
+}
+```
+
+---
+
+### 2️⃣ Book a Class
+
+**POST** `http://127.0.0.1:8000/book/`  
+Books 1 or more slots for a class.
+
+#### Request Body:
+```json
+{
+  "class_id": 3,
+  "client_name": "Test User",
+  "client_email": "test@example.com",
+  "slots": 1
+}
+```
+
+> 🔁 Repeat this call to test overbooking scenarios when `available_slots` reaches 0.
+
+---
+
+### 3️⃣ Get Bookings by Email
+
+**GET** `http://127.0.0.1:8000/bookings/?email=test@example.com&tz=Asia/Kolkata`  
+Returns bookings filtered by email, with optional timezone (defaults to `Asia/Kolkata`).
+
+---
+
+
