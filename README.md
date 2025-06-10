@@ -64,7 +64,7 @@ python manage.py test
 |--------|----------------|-------------|
 | GET    | `/classes/`    | List upcoming fitness classes |
 | POST   | `/classes/`    | Create a new fitness class |
-| DELETE | `/classes/<id>/` | Delete a class by ID |
+| DELETE | `/classes/<class_id>/delete/` | Delete a class by ID |
 | POST   | `/book/`       | Book slots in a class |
 | GET    | `/bookings/?email=user@example.com&tz=Asia/Kolkata` | View bookings by email (with timezone) |
 
